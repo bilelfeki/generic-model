@@ -1,5 +1,5 @@
 <div class="container">
-  <input *ngIf="elements_.name.hidable" type="text" placeholder="name" value="{{elements_.name.value}}"/>
-  <input *ngIf="elements_.age.hidable" type="text" placeholder="age" value="{{elements_.age.value}}"/>
-  <button *ngIf="elements_.submit.hidable" (click)="onSubmit()">submit</button>
+  <input *ngIf="elements_.name.hide" type="text" placeholder="name" value="{{elements_.name.value}}"/>
+  <input *ngIf="elements_.age.hide" type="text" placeholder="age" value="{{elements_.age.value}}"/>
+  <button *ngIf="elements_.submit.hide" (click)="onSubmit()">submit</button>
 </div>

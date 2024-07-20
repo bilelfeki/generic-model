@@ -15,23 +15,31 @@ export class FirstModelService implements ModelInterface {
     return {}
   };
 
+
   getForm() {
     //call api service
     let callApi = {
-      firstName: { value: 'semi'},
-      age: { value: 20 },
+      firstName: 'semi',
+      age: 20,
+      address:'sfax'
     };
+
     //handle change in the model
-    callApi.age.value = callApi.age.value * 2;
+    callApi.age = callApi.age * 2;
 
     //map the backend model to the front end model with
 
     return {
+      name: { value: callApi.address, hide: true },
+      age: { value: callApi.age, hide: true },
+      submit:{hide: true}
+    };
+    /*     return {
       ...callApi,
       name: {...callApi.firstName, hidable: this.nameConfig },
       age: {...callApi.age, hidable: this.ageConfig },
       submit:{hidable:true}
-    };
+    }; */
   }
 
 }

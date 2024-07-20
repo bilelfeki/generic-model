@@ -7,15 +7,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class CommonComponent {
   elements_={
-    name: { value: 'bilel', hidable: true },
-    age: { value: '20', hidable: true },
-    submit:{hidable:true}
+    name: { value: 'bilel', hide: true },
+    age: { value: '20', hide: true },
+    submit:{hide:true}
   };
   @Output() changedValue=new EventEmitter()
   @Input() set elements(elements:any){
     this.elements_={...this.elements_,...elements}
   }
   onSubmit() {
-    this.changedValue.emit(this.elements)
+    this.changedValue.emit(this.elements_)
   }
 }
